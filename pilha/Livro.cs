@@ -7,13 +7,16 @@
 
         public Livro(string titulo) 
         {
-            this.Titulo1 = titulo;
-            this.Anterior1 = null;
+            this.Titulo = titulo;
+            this.Anterior = null;
         }
 
-        public string Titulo1 { get => Titulo; set => Titulo = value; }
-        internal Livro Anterior1 { get => Anterior; set => Anterior = value; }
+        public void SetAnterior(Livro l) { this.Anterior = l; }
 
+        public Livro GetAnterior() { return this.Anterior; }
 
+        public string GetTitulo() { return this.Titulo; }
+
+        public string Print() { return $"Título: {this.Titulo}"; }
     }
 }
